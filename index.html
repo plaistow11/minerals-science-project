@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Minerals</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
@@ -69,19 +70,30 @@ html {
 <div class="row">
   <div class="col-3 menu">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="placeholder.html">Placeholder</a></li>
-      <li><a href="placeholder.html">Placeholder</a></li>
-      <li><a href="about.html">About this page...</a></li>
+      <li onclick="Home()"><a>Home</a></li>
+      <li><a href="placeholder.html"onclick="unfinished()">Placeholder</a></li>
+      <li><a href="placeholder.html"onclick="unfinished()">Placeholder</a></li>
+      <li onclick="About()"><a>About this page...</a></li>
     </ul>
   </div>
 
   <div class="col-9">
-    <h1>Home</h1>
-    <p>Welcome to my Minerals Student Project! Use the side buttons to navigate through the pages.</p>
-    <p>Have fun! (if something breaks, refresh the page.)</p>
+    <h1 id="title">Home</h1>
+    <p id="text">Hello!<br>Welcome to my Minerals Student Project!<br>Use the side buttons to navigate the pages.<br>Have fun! (if something breaks, refresh the page. If you have no luck, then wait for the next update.)</p>
+
+    <script>
+    function Home() {
+      document.getElementById("text").innerHTML = "Hello!<br>Welcome to my Minerals Student Project!<br>Use the side buttons to navigate the pages.<br>Have fun! (if something breaks, refresh the page. If you have no luck, then wait for the next update.)";
+      document.getElementById("title").innerHTML = "Home";
+    }
+    function About() {
+      document.getElementById("text").innerHTML = "This page exists because of a science project that I have to do by 4/23/2021, so hopefully this makes the deadline, or I'll be toast.";
+      document.getElementById("title").innerHTML = "Why is this a thing?";
+    }
+    </script>
   </div>
 </div>
+
 
 </body>
 </html>
