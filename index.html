@@ -71,29 +71,64 @@ html {
   <div class="col-3 menu">
     <ul>
       <li onclick="Home()"><a>Home</a></li>
-      <li><a href="placeholder.html"onclick="unfinished()">Placeholder</a></li>
-      <li><a href="placeholder.html"onclick="unfinished()">Placeholder</a></li>
+      <li onclick="Similarities()"><a>Rocks and Minerals: Similarities</a></li>
+      <li onclick="unfinished()"><a>Rocks and Minerals: Rocks</a></li>
+      <li onclick="unfinished()"><a>Rocks and Minerals: Minerals</a></li>
+      <li onclick="unfinished()"><a>Mineral Identification</a></li>
+      <li onclick="unfinished()"><a>Common Mineral Uses</a></li>
       <li onclick="About()"><a>About this page...</a></li>
+      <li onclick="misc()"><a>Miscellaneous</a></li>
     </ul>
   </div>
 
   <div class="col-9">
     <h1 id="title">Home</h1>
-    <p id="text">Hello!<br>Welcome to my Minerals Student Project!<br>Use the side buttons to navigate the pages.<br>Have fun! (if something breaks, refresh the page. If you have no luck, then wait for the next update.)</p>
+    <p id="text">Hello!<br><br>Welcome to my Minerals Student Project!<br><br>Use the side buttons to navigate the pages.<br><br>Have fun! (if something breaks, refresh the page. If you have no luck, then wait for the next update.)</p>
+    <audio id="myAudio" style="display:none">
+        <source src="uhoh.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <img id="image" src="toast.png" alt="toast" style="display:none">
 
     <script>
+    var x = document.getElementById("myAudio"); 
+
     function Home() {
-      document.getElementById("text").innerHTML = "Hello!<br>Welcome to my Minerals Student Project!<br>Use the side buttons to navigate the pages.<br>Have fun! (if something breaks, refresh the page. If you have no luck, then wait for the next update.)";
+      document.getElementById("text").innerHTML = "Hello!<br><br>Welcome to my Minerals Student Project!<br><br>Use the side buttons to navigate the pages.<br><br>Have fun! (if something breaks, refresh the page. If you have no luck, then wait for the next update.)";
       document.getElementById("title").innerHTML = "Home";
+      document.getElementById('image').style.display='none'
+      x.pause(); 
     }
     function About() {
       document.getElementById("text").innerHTML = "This page exists because of a science project that I have to do by 4/23/2021, so hopefully this makes the deadline, or I'll be toast.";
       document.getElementById("title").innerHTML = "Why is this a thing?";
+      document.getElementById('image').style.display='block'
+      x.pause(); 
+      
+    }
+    function Similarities() {
+      document.getElementById("text").innerHTML = "Some similarities of rocks and minerals are that: <br><br>They are inorganic compounds (non-living), <br><br>Both can be classified by their chemical composition, <br><br>They are solids, <br><br>They're naturally formed, and they are found around the world in many of the same places on Earth.";
+      document.getElementById("title").innerHTML = "Similarities of Rocks and Minerals";
+      document.getElementById('image').style.display='none'
+      x.pause(); 
+    }
+    function unfinished() {
+      document.getElementById("text").innerHTML = "This part isn't done yet, check back later!";
+      document.getElementById("title").innerHTML = "Whoops!";
+      document.getElementById('image').style.display='none'
+      x.play();
+    }
+    function misc() {
+      document.getElementById('text').innerHTML = Date();
+      document.getElementById("title").innerHTML = "Time. (click tab again to refresh time)";
+      document.getElementById('image').style.display='none';
+      window.alert("Oh cool, a pop-up box. You can close this now.");
+      x.pause();
     }
     </script>
   </div>
 </div>
-
+<div class="footer"></div>
 
 </body>
 </html>
