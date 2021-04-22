@@ -76,6 +76,7 @@ html {
       <li onclick="unfinished()"><a>Rocks and Minerals: Minerals</a></li>
       <li onclick="unfinished()"><a>Mineral Identification</a></li>
       <li onclick="unfinished()"><a>Common Mineral Uses</a></li>
+      <li onclick="credits()"><a>Credits (sorta?)</a></li>
       <li onclick="About()"><a>About this page...</a></li>
       <li onclick="misc()"><a>Miscellaneous</a></li>
     </ul>
@@ -122,8 +123,13 @@ html {
       document.getElementById('text').innerHTML = Date();
       document.getElementById("title").innerHTML = "Time. (click tab again to refresh time)";
       document.getElementById('image').style.display='none';
-      window.alert("Oh cool, a pop-up box. You can close this now.");
       x.pause();
+    }
+    function credits() {
+      document.getElementById("text").innerHTML = "I took about 7-8 hours on this, but probably even longer depending if I change this later on.<br><br>If you want to learn more, go to w3schools.com. I use that website whenever I make a project like this (so like 2 times maybe) and it helps out so much. I would recommend this for beginners who want to learn. (also, this was made in JavaScript too, so definitely check that one out too!)"
+      document.getElementById("title").innerHTML = "This took quite a good bit to make.";
+      document.getElementById('image').style.display='none'
+      x.play();
     }
     </script>
   </div>
