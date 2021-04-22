@@ -82,7 +82,7 @@ footer {
       <li onclick="Rocks()"><a>Rocks and Minerals: Rocks</a></li>
       <li onclick="Minerals()"><a>Rocks and Minerals: Minerals</a></li>
       <li onclick="Identity()"><a>Mineral Identification</a></li>
-      <li onclick="unfinished()"><a>Common Mineral Uses</a></li>
+      <li onclick="Common()"><a>Common Mineral Uses</a></li>
       <li onclick="Misc()"><a>Miscellaneous</a></li>
       <li onclick="About()"><a>About this page...</a></li>
       <li onclick="Credits()"><a>Credits (sorta?)</a></li>
@@ -92,7 +92,7 @@ footer {
   <div class="col-9">
     <h1 id="title">Home</h1>
     <p id="text">Hello!<br><br>Welcome to my Minerals Student Project!<br><br>Use the side buttons to navigate the pages.<br><br>Have fun! (if something breaks, refresh the page. If you have no luck, then wait for the next update.)</p>
-    <audio id="myAudioMain" style="display:none">
+    <audio id="myAudioMain" style="display:none" autoplay="true">
        <source src="main.mp3" type="audio/mpeg">
        Your browser does not support the audio element.
      </audio>
@@ -104,87 +104,111 @@ footer {
         <source src="cred.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
-      <img id="image" src="toast.png" alt="toast" style="display:none">
+    <img id="image" src="toast.png" alt="toast" style="display:none">
+    <img id="image1" src="table.png" alt="common uses table" style="display:none">
 
     <script>
+    console.log("You found me! You're pretty cool for finding me in here, even though I never told you to look here. Anyways, ciao! -Jack Murphy");
     var x = document.getElementById("myAudio"); 
     var y = document.getElementById("myAudioCred");
-    var z = document.getElementById("")
+    var z = document.getElementById("myAudioMain");
+
     function Home() {
-      document.getElementById("text").innerHTML = "Hello!<br><br>Welcome to my Minerals Student Project!<br><br>Use the side buttons to navigate the pages.<br><br>Have fun! (if something breaks, refresh the page. If you have no luck, then wait for the next update.)";
+      document.getElementById("text").innerHTML = "Hello!<br><br>Welcome to my Minerals Student Project!<br><br>Use the side buttons to navigate the pages.<br><br>Have fun! (if something breaks, refresh the page. If you have no luck, then wait for the next update.)<br><br>(also, click the Home tab, it'll start playing music!)";
       document.getElementById("title").innerHTML = "Home";
-      document.getElementById('image').style.display='none'
+      document.getElementById('image').style.display='none';
+      document.getElementById('image1').style.display='none';
       x.pause(); 
       y.pause();
+      z.play();
     }
     function About() {
       document.getElementById("text").innerHTML = "This page exists because of a science project that I have to do by 4/23/2021, so hopefully this makes the deadline, or I'll be toast.";
       document.getElementById("title").innerHTML = "Why is this a thing?";
-      document.getElementById('image').style.display='block'
+      document.getElementById('image').style.display='block';
+      document.getElementById('image1').style.display='none';
       x.pause(); 
       y.pause();
+      z.play();
     }
     function Similarities() {
       document.getElementById("text").innerHTML = "Some similarities of rocks and minerals are that: <br><br>They are inorganic compounds (non-living), <br><br>Both can be classified by their chemical composition, <br><br>They are solids, <br><br>They're naturally formed, and they are found around the world in many of the same places on Earth.";
       document.getElementById("title").innerHTML = "Similarities of Rocks and Minerals";
       document.getElementById('image').style.display='none'
+      document.getElementById('image1').style.display='none';
       x.pause(); 
       y.pause();
+      z.play();
     }
-    function unfinished() {
-      document.getElementById("text").innerHTML = "This part isn't done yet, check back later!";
-      document.getElementById("title").innerHTML = "Whoops!";
-      document.getElementById('image').style.display='none'
+    function debug() {
+      document.getElementById("text").innerHTML = "onClick functions";
+      document.getElementById("title").innerHTML = "Debug";
+      document.getElementById('image').style.display='none';
+      document.getElementById('image1').style.display='none';
       x.play();
       y.pause();
+      z.pause();
     }
     function Misc() {
       document.getElementById('text').innerHTML = Date();
       document.getElementById("title").innerHTML = "Time. (click tab again to refresh time)";
       document.getElementById('image').style.display='none';
+      document.getElementById('image1').style.display='none';
       x.pause();
       y.pause();
+      z.play();
     }
     function Credits() {
       document.getElementById("text").innerHTML = "I made this over the course of about 2-ish days. <br>Most of the time was getting things to even work, because JavaScript is new to me. <br>So as long as it does what it has to do, I'll be happy.<br><br>(also, if you want to learn how to do this, I suggest w3schools.com, that place will help out a lot for beginners.)"
       document.getElementById("title").innerHTML = "Credits";
-      document.getElementById('image').style.display='none'
+      document.getElementById('image').style.display='none';
+      document.getElementById('image1').style.display='none';
       x.pause();
       y.play();
+      z.pause();
     }
     function Rocks() {
-      document.getElementById("text").innerHTML = "This page exists because of a science project that I have to do by 4/23/2021, so hopefully this makes the deadline, or I'll be toast.";
-      document.getElementById("title").innerHTML = "Why is this a thing?";
-      document.getElementById('image').style.display='block'
+      document.getElementById("text").innerHTML = "Rocks are most commonly classified by how they form. <br>They are composed of more than one mineral, has no definite chemical composition, and has no definite crystal structure.";
+      document.getElementById("title").innerHTML = "Rocks and Minerals: Rocks";
+      document.getElementById('image').style.display='none';
+      document.getElementById('image1').style.display='none';
       x.pause(); 
       y.pause();
+      z.play();
     }
     function Minerals() {
-      document.getElementById("text").innerHTML = "This page exists because of a science project that I have to do by 4/23/2021, so hopefully this makes the deadline, or I'll be toast.";
-      document.getElementById("title").innerHTML = "Why is this a thing?";
-      document.getElementById('image').style.display='block'
+      document.getElementById("text").innerHTML = "In addition to being inorganic, solid, and naturally formed like rocks, minerals also have a definite chemical composition (amounts of elements present), <br>and a definite crystal structure. (unique arrangement of atoms/molecules)";
+      document.getElementById("title").innerHTML = "Rocks and Minerals: Minerals";
+      document.getElementById('image').style.display='none';
+      document.getElementById('image1').style.display='none';
       x.pause(); 
       y.pause();
+      z.play();
     }
     function Identity() {
-      document.getElementById("text").innerHTML = "This page exists because of a science project that I have to do by 4/23/2021, so hopefully this makes the deadline, or I'll be toast.";
-      document.getElementById("title").innerHTML = "Why is this a thing?";
-      document.getElementById('image').style.display='block'
+      document.getElementById("text").innerHTML = "Color (green, red, yellow, blue, etc.) <br><br>Streak (Color of the streak across a streak plate) <br><br>Luster (Metallic or Non-Metallic) <br><br>Hardness (Mohs Scale) <br><br>Density (Specific gravity) <br><br>Breakage Pattern (Cleavage and Fracture)";
+      document.getElementById("title").innerHTML = "Mineral Identification";
+      document.getElementById('image').style.display='none';
+      document.getElementById('image1').style.display='none';
       x.pause(); 
       y.pause();
+      z.play();
     }
     function Common() {
-      document.getElementById("text").innerHTML = "This page exists because of a science project that I have to do by 4/23/2021, so hopefully this makes the deadline, or I'll be toast.";
-      document.getElementById("title").innerHTML = "Why is this a thing?";
-      document.getElementById('image').style.display='block'
+      document.getElementById("text").innerHTML = "Rocks are most commonly classified by how they form. <br>They are composed of more than one mineral, has no definite chemical composition, and has no definite crystal structure.";
+      document.getElementById("title").innerHTML = "Common Uses of Minerals";
+      document.getElementById('image').style.display='none';
+      document.getElementById('image1').style.display='block';
       x.pause(); 
       y.pause();
+      z.play();
     }
+    
     </script>
   </div>
 </div>
 <footer>
-  <p><a href="https://github.com/plaistow11">Jack Murphy</a><br><br>Last updated: 4/22/2021</p>
+  <p><a href="https://github.com/plaistow11" style="color: cyan;">Jack Murphy</a><br><br><a onclick="debug()">Last updated: 4/22/2021</a></p>
 </footer>
 
 </body>
