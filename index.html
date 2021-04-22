@@ -38,7 +38,7 @@ html {
 
 .header {
   background-color: #4b3be2;
-  color: #b68723;
+  color: #ff8d4b;
   padding: 15px;
 }
 
@@ -58,6 +58,13 @@ html {
 
 .menu li:hover {
   background-color: #0099cc;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #4b3be2;
+  color: white;
 }
 </style>
 </head>
@@ -89,22 +96,28 @@ html {
         <source src="uhoh.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
+    <audio id="myAudioCred" style="display:none">
+        <source src="cred.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
       <img id="image" src="toast.png" alt="toast" style="display:none">
 
     <script>
     var x = document.getElementById("myAudio"); 
-
+    var y = document.getElementById("myAudioCred");
     function Home() {
       document.getElementById("text").innerHTML = "Hello!<br><br>Welcome to my Minerals Student Project!<br><br>Use the side buttons to navigate the pages.<br><br>Have fun! (if something breaks, refresh the page. If you have no luck, then wait for the next update.)";
       document.getElementById("title").innerHTML = "Home";
       document.getElementById('image').style.display='none'
       x.pause(); 
+      y.pause();
     }
     function About() {
       document.getElementById("text").innerHTML = "This page exists because of a science project that I have to do by 4/23/2021, so hopefully this makes the deadline, or I'll be toast.";
       document.getElementById("title").innerHTML = "Why is this a thing?";
       document.getElementById('image').style.display='block'
       x.pause(); 
+      y.pause();
       
     }
     function Similarities() {
@@ -112,29 +125,35 @@ html {
       document.getElementById("title").innerHTML = "Similarities of Rocks and Minerals";
       document.getElementById('image').style.display='none'
       x.pause(); 
+      y.pause();
     }
     function unfinished() {
       document.getElementById("text").innerHTML = "This part isn't done yet, check back later!";
       document.getElementById("title").innerHTML = "Whoops!";
       document.getElementById('image').style.display='none'
       x.play();
+      y.pause();
     }
     function misc() {
       document.getElementById('text').innerHTML = Date();
       document.getElementById("title").innerHTML = "Time. (click tab again to refresh time)";
       document.getElementById('image').style.display='none';
       x.pause();
+      y.pause();
     }
     function credits() {
-      document.getElementById("text").innerHTML = "I took about 7-8 hours on this, but probably even longer depending if I change this later on.<br><br>If you want to learn more, go to w3schools.com. I use that website whenever I make a project like this (so like 2 times maybe) and it helps out so much. I would recommend this for beginners who want to learn. (also, this was made in JavaScript too, so definitely check that one out too!)"
-      document.getElementById("title").innerHTML = "This took quite a good bit to make.";
+      document.getElementById("text").innerHTML = "I made this over the course of about 2 days-ish. <br>Most of the time was getting things to even work, because JavaScript is new to me. <br>So as long as it does what it has to do, I'll be happy.<br><br>(also, if you want to learn how to do this, I suggest w3schools.com, that place will help out a lot for beginners.)"
+      document.getElementById("title").innerHTML = "Credits";
       document.getElementById('image').style.display='none'
-      x.play();
+      x.pause();
+      y.play();
     }
     </script>
   </div>
 </div>
-<div class="footer"></div>
+<footer>
+  <p>Jack Murphy<br><br>Last updated: 4/22/2021</p>
+</footer>
 
 </body>
 </html>
