@@ -86,6 +86,7 @@ footer {
       <li onclick="Misc()"><a>Miscellaneous</a></li>
       <li onclick="About()"><a>About this page...</a></li>
       <li onclick="Credits()"><a>Credits (sorta?)</a></li>
+      <li onclick="Links()"><a>Links to other resources</a></li>
     </ul>
   </div>
 
@@ -308,6 +309,30 @@ footer {
       y.pause();
       z.play();
     }
+    function Links() {
+  if (confirm("Warning! \nThe link will bring you to an external site!\nBeware!")) {
+      document.getElementById("text").innerHTML = "<a href=\"https://www.nps.gov/subjects/geology/rocks-and-minerals.htm\">NPS.gov on rocks and minerals.</a>";
+      document.getElementById("title").innerHTML = "External Links (These will take you outside this page!)";
+      document.getElementById('image').style.display='none';
+      document.getElementById('image1').style.display='none';
+      document.getElementById('dug').style.display='block';
+      x.pause();
+      y.pause();
+      z.pause();
+  } else {
+      window.alert("Cancelled by user. Please press \"Home\" tab")
+      document.getElementById("text").innerHTML = "Hello!<br><br>Welcome to my Minerals Student Project!<br><br>Use the side buttons to navigate the pages.<br><br>Have fun! (if something breaks, refresh the page. If you have no luck, then wait for the next update.)<br><br>(also, click the Home tab, it'll start playing music!)";
+      document.getElementById("title").innerHTML = "Home";
+      document.getElementById('image').style.display='none';
+      document.getElementById('image1').style.display='none';
+      document.getElementById('dug').style.display='none';
+      x.pause(); 
+      y.pause();
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+      
+    
     
     </script>
   </div>
